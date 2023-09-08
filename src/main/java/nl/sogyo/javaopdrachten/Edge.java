@@ -9,7 +9,6 @@ public class Edge{
 		this.answer = answer;
 	}
 	
-	
 	public static void main(String []args){
 		Edge edge = new Edge("N4","N5","Yes");
 		System.out.println(edge.origin);

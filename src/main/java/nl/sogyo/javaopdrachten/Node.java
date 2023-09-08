@@ -21,19 +21,13 @@ public class Node{
 		this.isAnswer = false;
 	}
 	
-	
 	public Node getYesNode(){
 		return this.nextYes;
 	}
-	
-	public boolean getIsAnswer(){
-		return this.isAnswer;
-	}
-	
+
 	public Node getNoNode(){
 		return this.nextNo;
 	}
-	
 	
 	public static void main(String []args){
 		Node node = new Node("N4","Is the edge of the leaf smooth?");
