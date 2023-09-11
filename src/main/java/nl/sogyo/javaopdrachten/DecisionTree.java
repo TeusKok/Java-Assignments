@@ -8,6 +8,7 @@ public class DecisionTree{
 	static ArrayList<Edge> edgeList = new ArrayList<Edge>();
 	static HashMap<String,Node> nodeMap = new HashMap<String,Node>();
 	static ArrayList<String> nodeNameList = new ArrayList<String>();
+	static Node root;
 	
 	public static void main(String []args){
 		String file = "../../../../resources/intermediate/decision-tree-data.txt";
@@ -18,6 +19,11 @@ public class DecisionTree{
 		}
 		else{
 			connectNodesUsingEdges();
+			
+			edgeList.clear();
+			nodeMap.clear();
+			nodeNameList.clear();
+			
 			executeTree();
 		}		
 	}
@@ -55,9 +61,10 @@ public class DecisionTree{
 			}
 			
 		});
+		root = nodeMap.get(nodeNameList.get(0));
 	}
 	public static void executeTree(){
-		Node currentNode = nodeMap.get(nodeNameList.get(0));
+		Node currentNode = root;
 		Scanner input = new Scanner(System.in);
 		String userAnswer;
 		
